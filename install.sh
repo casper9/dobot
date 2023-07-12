@@ -30,4 +30,6 @@ END
 systemctl enable dobot
 systemctl start dobot
 
+cd
+rm install.sh
 echo -e "Sukses Create Panel BOT Digital Ocean /start di bot untuk mulai"
