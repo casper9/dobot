@@ -5,6 +5,7 @@ cd /etc/
 git clone https://github.com/casper9/dobot.git
 pip3 install -r /etc/dobot/requirements.txt
 
+clear
 read -e -p "[*] Input your Nama Store : " nama
 read -e -p "[*] Input your Bot Token : " bottoken
 read -e -p "[*] Input Your Id Telegram :" admin
