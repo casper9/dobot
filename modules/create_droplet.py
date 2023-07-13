@@ -228,7 +228,7 @@ def get_name(call: CallbackQuery, data: dict):
 
     msg = bot.edit_message_text(
         text=f'{_t}'
-             'Harap balas nama contoh: FighterTunnel\n\n'
+             'Harap balas nama contoh: CasperVPS\n\n'
              '/back Sebelumnya',
         chat_id=call.from_user.id,
         message_id=call.message.message_id,
