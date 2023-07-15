@@ -242,8 +242,7 @@ def ask_create(m: Message):
         select_image(m, data={'size': [user_dict[m.from_user.id]["size_slug"]]})
         return
 
-    _t = t + f'Akun: <code>{user_dict[m.from_user.id]["account"]["email"]}</code>\n' \
-             f'Negara: <code>{user_dict[m.from_user.id]["region_slug"]}</code>\n' \
+    _t = t + f'Negara: <code>{user_dict[m.from_user.id]["region_slug"]}</code>\n' \
              f'Model: <code>{user_dict[m.from_user.id]["size_slug"]}</code>\n' \
              f'Sys Os: <code>{user_dict[m.from_user.id]["image_slug"]}</code>\n' \
              f'Nama: <code>{m.text}</code>\n\n'
@@ -308,7 +307,7 @@ def confirm_create(call: CallbackQuery, data: dict):
     droplet_actions = droplet.get_actions()
     for action in droplet_actions:
         while action.status != 'completed':
-            sleep(3)
+            sleep(5)
             action.load()
     droplet.load()
 
@@ -324,6 +323,7 @@ def confirm_create(call: CallbackQuery, data: dict):
 
     bot.edit_message_text(
         text=f'{call.message.html_text}\n'
+             f'UserName: <code>root</code>\n'   
              f'kata sandi: <code>{password}</code>\n'
              f'IP： <code>{droplet.ip_address}</code>\n\n'
              '<b>Penciptaan server selesai</b>',
