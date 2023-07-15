@@ -1,3 +1,5 @@
+clear
+clear
 apt update -y && apt upgrade -y
 apt install python3 python3-pip git -y
 apt-get install libjpeg-dev zlib1g-dev -y
