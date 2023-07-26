@@ -328,7 +328,6 @@ def confirm_create(call: CallbackQuery, data: dict):
              f'IP： <code>{droplet.ip_address}</code>\n\n'
              '<b>Penciptaan server selesai</b>',
         chat_id=call.from_user.id,
-        reply_markup=markup,
-        message_id=call.message.message_id,
+message_id=call.message.message_id,
         parse_mode='HTML'
     )
